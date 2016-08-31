@@ -1,0 +1,205 @@
+% Encoding: x-MacRoman
+
+
+@InProceedings{AXLHLBMKFGZ15,
+  Title                    = {{S}park {SQL}: {R}elational {D}ata {P}rocessing in {S}park},
+  Author                   = {M. Armbrust and R. S. Xin and C. Lian and Y. Huai and D. Liu and J. K. Bradley and X. Meng and T. Kaftan and M. J. Franklin and A. Ghodsi and M. Zaharia},
+  Booktitle                = {Proceedings of the 2015 ACM SIGMOD International Conference on Management of Data},
+  Year                     = {2015},
+
+  Address                  = {Melbourne, Victoria, Australia},
+  Pages                    = {1383--1394},
+  Publisher                = {ACM},
+  Series                   = {SIGMOD '15},
+
+  Abstract                 = {Spark SQL is a new module in Apache Spark that integrates relational processing with Spark's functional programming API. Built on our experience with Shark, Spark SQL lets Spark programmers leverage the benefits of relational processing (e.g. declarative queries and optimized storage), and lets SQL users call complex analytics libraries in Spark (e.g. machine learning). Compared to previous systems, Spark SQL makes two main additions. First, it offers much tighter integration between relational and procedural processing, through a declarative DataFrame API that integrates with procedural Spark code. Second, it includes a highly extensible optimizer, Catalyst, built using features of the Scala programming language, that makes it easy to add composable rules, control code generation, and define extension points. Using Catalyst, we have built a variety of features (e.g. schema inference for JSON, machine learning types, and query federation to external databases) tailored for the complex needs of modern data analysis. We see Spark SQL as an evolution of both SQL-on-Spark and of Spark itself, offering richer APIs and optimizations while keeping the benefits of the Spark programming model.},
+  Doi                      = {10.1145/2723372.2742797},
+  Owner                    = {z001psc},
+  Timestamp                = {2015.10.12}
+}
+
+@Article{Dunning93,
+  author    = {T. Dunning},
+  title     = {{A}ccurate {M}ethods for the {S}tatistics of {S}urprise and {C}oincidence},
+  journal   = {Computational Linguistics},
+  year      = {1993},
+  volume    = {19},
+  number    = {1},
+  pages     = {61--74},
+  month     = {March},
+  abstract  = {Much work has been done on the statistical analysis of text. In some cases reported in the literature, inappropriate statistical methods have been used, and statistical significance of results have not been addressed. In particular, asymptotic normality assumptions have often been used unjustifiably, leading to flawed results.This assumption of normal distribution limits the ability to analyze rare events. Unfortunately rare events do make up a large fraction of real text.However, more applicable methods based on likelihood ratio tests are available that yield good results with relatively small samples. These tests can be implemented efficiently, and have been used for the detection of composite terms and for the determination of domain-specific terms. In some cases, these measures perform much better than the methods previously used. In cases where traditional contingency table methods work well, the likelihood ratio tests described here are nearly identical.This paper describes the basis of a measure based on likelihood ratios that can be applied to the analysis of text.},
+  file      = {:../../../papers/Dunning93.pdf:PDF},
+  owner     = {z001psc},
+  timestamp = {2015.10.27},
+  url       = {http://dl.acm.org/citation.cfm?id=972450.972454},
+}
+
+@Book{DF14,
+  title     = {{P}ractical {M}achine {L}earning},
+  publisher = {O'Reilly Media, Inc.},
+  year      = {2014},
+  author    = {T. Dunning and E. Friedman},
+  editor    = {M. Loukides},
+  edition   = {first},
+  file      = {:../../../papers/DF14.pdf:PDF},
+  owner     = {z001psc},
+  timestamp = {2015.10.26},
+  url       = {http://shop.oreilly.com/product/0636920033172.do},
+}
+
+@InProceedings{GBGP10,
+  author    = {S. Goel and A. Broder and E. Gabrilovich and B. Pang},
+  title     = {{A}natomy of the {L}ong {T}ail: {O}rdinary {P}eople with {E}xtraordinary {T}astes},
+  booktitle = {Proceedings of the Third ACM International Conference on Web Search and Data Mining},
+  year      = {2010},
+  series    = {WSDM '10},
+  pages     = {1--10},
+  address   = {New York, New York},
+  month     = {February 4--6},
+  publisher = {ACM},
+  abstract  = {The success of "infinite-inventory" retailers such as Amazon.com and Netflix has been ascribed to a "long tail" phenomenon. To wit, while the majority of their inventory is not in high demand, in aggregate these "worst sellers," unavailable at limited-inventory competitors, generate a significant fraction of total revenue. The long tail phenomenon, however, is in principle consistent with two fundamentally different theories. The first, and more popular hypothesis, is that a majority of consumers consistently follow the crowds and only a minority have any interest in niche content; the second hypothesis is that everyone is a bit eccentric, consuming both popular and specialty products. Based on examining extensive data on user preferences for movies, music, Web search, and Web browsing, we find overwhelming support for the latter theory. However, the observed eccentricity is much less than what is predicted by a fully random model whereby every consumer makes his product choices independently and proportional to product popularity; so consumers do indeed exhibit at least some a priori propensity toward either the popular or the exotic.
+
+Our findings thus suggest an additional factor in the success of infinite-inventory retailers, namely, that tail availability may boost head sales by offering consumers the convenience of "one-stop shopping" for both their mainstream and niche interests. This hypothesis is further supported by our theoretical analysis that presents a simple model in which shared inventory stores, such as Amazon Marketplace, gain a clear advantage by satisfying tail demand, helping to explain the emergence and increasing popularity of such retail arrangements. Hence, we believe that the return-on-investment (ROI) of niche products goes beyond direct revenue, extending to second-order gains associated with increased consumer satisfaction and repeat patronage. More generally, our findings call into question the conventional wisdom that specialty products only appeal to a minority of consumers.},
+  doi       = {10.1145/1718487.1718513},
+  file      = {:../../../papers/GBGP10.pdf:PDF},
+  owner     = {z001psc},
+  timestamp = {2015.10.26},
+}
+
+@InProceedings{HKV08,
+  Title                    = {{C}ollaborative {F}iltering for {I}mplicit {F}eedback {D}atasets},
+  Author                   = {Y. Hu and Y. Koren and C. Volinsky},
+  Booktitle                = {Eighth IEEE International Conference on Data Mining},
+  Year                     = {2008},
+
+  Address                  = {Pisa, Italy},
+  Month                    = {December 15--19},
+  Pages                    = {263--272},
+  Publisher                = {IEEE},
+  Series                   = {ICDM '08},
+
+  Abstract                 = {A common task of recommender systems is to improve customer experience through personalized recommendations based on prior implicit feedback. These systems passively track different sorts of user behavior, such as purchase history, watching habits and browsing activity, in order to model user preferences. Unlike the much more extensively researched explicit feedback, we do not have any direct input from the users regarding their preferences. In particular, we lack substantial evidence on which products consumer dislike. In this work we identify unique properties of implicit feedback datasets. We propose treating the data as indication of positive and negative preference associated with vastly varying confidence levels. This leads to a factor model which is especially tailored for implicit feedback recommenders. We also suggest a scalable optimization procedure, which scales linearly with the data size. The algorithm is used successfully within a recommender system for television shows. It compares favorably with well tuned implementations of other known methods. In addition, we offer a novel way to give explanations to recommendations given by this factor model.},
+  Doi                      = {10.1109/ICDM.2008.22},
+  Owner                    = {z001psc},
+  Timestamp                = {2015.10.26}
+}
+
+@Article{KBV09,
+  author    = {Y. Koren and R. Bell and C. Volinsky},
+  title     = {{M}atrix {F}actorization {T}echniques for {R}ecommender {S}ystems},
+  journal   = {Computer},
+  year      = {2009},
+  volume    = {42},
+  number    = {8},
+  pages     = {30--37},
+  month     = {Aug},
+  abstract  = {As the Netflix Prize competition has demonstrated, matrix factorization models are superior to classic nearest neighbor techniques for producing product recommendations, allowing the incorporation of additional information such as implicit feedback, temporal effects, and confidence levels.},
+  doi       = {10.1109/MC.2009.263},
+  file      = {:../../../papers/KBV09.pdf:PDF},
+  owner     = {z001psc},
+  timestamp = {2015.10.26},
+}
+
+@InCollection{SFHS07,
+  Title                    = {{C}ollaborative {F}iltering {R}ecommender {S}ystems},
+  Author                   = {J. B. Schafer and D. Frankowski and J. Herlocker and S. Sen},
+  Booktitle                = {The Adaptive Web},
+  Publisher                = {Spring Berlin Heidelberg},
+  Year                     = {2007},
+  Chapter                  = {9},
+  Editor                   = {P. Brusilovsky and A. Kobsa and W. Nejdl},
+  Pages                    = {291--324},
+  Series                   = {Lecture Notes in Computer Science},
+  Volume                   = {4321},
+
+  Abstract                 = {One of the potent personalization technologies powering the adaptive web is collaborative filtering. Collaborative filtering (CF) is the process of filtering or evaluating items through the opinions of other people. CF technology brings together the opinions of large interconnected communities on the web, supporting filtering of substantial quantities of data. In this chapter we introduce the core concepts of collaborative filtering, its primary uses for users of the adaptive web, the theory and practice of CF algorithms, and design decisions regarding rating systems and acquisition of ratings. We also discuss how to evaluate CF systems, and the evolution of rich interaction interfaces. We close the chapter with discussions of the challenges of privacy particular to a CF recommendation service and important open research questions in the field.},
+  Doi                      = {10.1007/978-3-540-72079-9_9},
+  Owner                    = {z001psc},
+  Timestamp                = {2015.11.09}
+}
+
+@InProceedings{SBM12,
+  author    = {S. Schelter and C. Boden and V. Markl},
+  title     = {{S}calable {S}imilarity-based {N}eighborhood {M}ethods with {M}ap{R}educe},
+  booktitle = {Proceedings of the Sixth ACM Conference on Recommender Systems},
+  year      = {2012},
+  series    = {RecSys '12},
+  pages     = {163--170},
+  address   = {Dublin, Ireland},
+  publisher = {ACM},
+  abstract  = {Similarity-based neighborhood methods, a simple and popular approach to collaborative filtering, infer their predictions by finding users with similar taste or items that have been similarly rated. If the number of users grows to millions, the standard approach of sequentially examining each item and looking at all interacting users does not scale. To solve this problem, we develop a MapReduce algorithm for the pairwise item comparison and top-N recommendation problem that scales linearly with respect to a growing number of users. This parallel algorithm is able to work on partitioned data and is general in that it supports a wide range of similarity measures. We evaluate our algorithm on a large dataset consisting of 700 million song ratings from Yahoo! Music.},
+  doi       = {10.1145/2365952.2365984},
+  file      = {:../../../papers/SBM12.pdf:PDF},
+  owner     = {z001psc},
+  timestamp = {2015.10.27},
+}
+
+@TechReport{ZCDDMMFSS11,
+  author      = {M. Zaharia and M. Chowdhury and T. Das and A. Dave and J. Ma and M. Mc{C}auley and M. Franklin and S. Shenker and I. Stoica},
+  title       = {{R}esilient {D}istributed {D}atasets: {A} {F}ault-{T}olerant {A}bstraction for {I}n-{M}emory {C}luster {C}omputing},
+  institution = {EECS Department, University of California at Berkeley},
+  year        = {2011},
+  number      = {UCB/EECS-2011-82},
+  month       = {July},
+  abstract    = {We present Resilient Distributed Datasets (RDDs), a distributed memory abstraction that allows programmers to perform in-memory computations on large clusters while retaining the fault tolerance of data flow models like MapReduce. RDDs are motivated by two types of applications that current data flow systems handle inefficiently: iterative algorithms, which are common in graph applications and machine learning, and interactive data mining tools. In both cases, keeping data in memory can improve performance by an order of magnitude. To achieve fault tolerance efficiently, RDDs provide a highly restricted form of shared memory: they are read-only datasets that can only be constructed through bulk operations on other RDDs. However, we show that RDDs are expressive enough to capture a wide class of computations, including MapReduce and specialized programming models for iterative jobs such as Pregel. Our implementation of RDDs can outperform Hadoop by 20x for iterative jobs and can be used interactively to search a 1 TB dataset with latencies of 5-7 seconds.},
+  file        = {:../../../papers/ZCDDMMFSS11.pdf:PDF},
+  owner       = {z001psc},
+  timestamp   = {2015.10.26},
+  url         = {http://www.eecs.berkeley.edu/Pubs/TechRpts/2011/EECS-2011-82.html},
+}
+
+@InProceedings{ZCFSS10,
+  author    = {M. Zaharia and M. Chowdhury and M. J. Franklin and S. Shenker and I. Stoica},
+  title     = {{S}park: {C}luster {C}omputing with {W}orking {S}ets},
+  booktitle = {Proceedings of the 2Nd USENIX Conference on Hot Topics in Cloud Computing},
+  year      = {2010},
+  series    = {HotCloud'10},
+  address   = {Boston, MA},
+  abstract  = {MapReduce and its variants have been highly successful in implementing large-scale data-intensive applications on commodity clusters. However, most of these systems are built around an acyclic data flow model that is not suitable for other popular applications. This paper focuses on one such class of applications: those that reuse a working set of data across multiple parallel operations. This includes many iterative machine learning algorithms, as well as interactive data analysis tools. We propose a new framework called Spark that supports these applications while retaining the scalability and fault tolerance of MapReduce. To achieve these goals, Spark introduces an abstraction called resilient distributed datasets (RDDs). An RDD is a read-only collection of objects partitioned across a set of machines that can be rebuilt if a partition is lost. Spark can outperform Hadoop by 10x in iterative machine learning jobs, and can be used to interactively query a 39 GB dataset with sub-second response time.},
+  file      = {:../../../papers/ZCFSS10.pdf:PDF},
+  owner     = {z001psc},
+  timestamp = {2015.11.17},
+  url       = {http://dl.acm.org/citation.cfm?id=1863103.1863113},
+}
+
+@Conference{LZYLXAS13,
+  author    = {M. Li and L. Zhou and Z. Yang and A. Li and F. Xia and D. G. Anderson and A. Smola},
+  title     = {Parameter Server for Distributed Machine Learning},
+  booktitle = {Big Learning NIPS Workshop},
+  year      = {2013},
+  abstract  = {We propose a parameter server framework to solve distributed machine learning problems. Both data and workload are distributed into client nodes, while server nodes maintain globally shared parameters, which are represented as sparse vectors and matrices. The framework manages asynchronous data communications between clients and servers. Flexible consistency models, elastic scalability and fault tolerance are supported by this framework. We present algorithms and theoretical analysis for challenging nonconvex and nonsmooth problems. To demonstrate the scalability of the proposed framework, we show experimental results on real data with billions of parameters.},
+  file      = {:../../../papers/LZYLXAS13.pdf:PDF},
+  owner     = {patrick},
+  timestamp = {2016-08-29},
+}
+
+@InProceedings{SHG09,
+  author    = {D. Stern and R. Herbrich and T. Graepel},
+  title     = {Matchbox: Large Scale Online Bayesian Recommendations},
+  booktitle = {Proceedings of the 18th International Conference on World Wide Web},
+  year      = {2009},
+  series    = {WWW '09},
+  pages     = {111--120},
+  publisher = {ACM},
+  abstract  = {We present a probabilistic model for generating personalised recommendations of items to users of a web service. The Matchbox system makes use of content information in the form of user and item meta data in combination with collaborative filtering information from previous user behavior in order to predict the value of an item for a user. Users and items are represented by feature vectors which are mapped into a low-dimensional `trait space' in which similarity is measured in terms of inner products. The model can be trained from different types of feedback in order to learn user-item preferences. Here we present three alternatives: direct observation of an absolute rating each user gives to some items, observation of a binary preference (like/ don't like) and observation of a set of ordinal ratings on a user-specific scale. Efficient inference is achieved by approximate message passing involving a combination of Expectation Propagation (EP) and Variational Message Passing. We also include a dynamics model which allows an item's popularity, a user's taste or a user's personal rating scale to drift over time. By using Assumed-Density Filtering (ADF) for training, the model requires only a single pass through the training data. This is an on-line learning algorithm capable of incrementally taking account of new data so the system can immediately reflect the latest user preferences. We evaluate the performance of the algorithm on the MovieLens and Netflix data sets consisting of approximately 1,000,000 and 100,000,000 ratings respectively. This demonstrates that training the model using the on-line ADF approach yields state-of-the-art performance with the option of improving performance further if computational resources are available by performing multiple EP passes over the training data.},
+  doi       = {10.1145/1526709.1526725},
+  file      = {:../../../papers/SHG09.pdf:PDF},
+  owner     = {patrick},
+  timestamp = {2016-08-31},
+}
+
+@InProceedings{MHS+13,
+  author    = {H. B. McMahan, and G. Holt and D. Sculley and M. Young and D. Ebner and J. Grady and L. Nie and T. Phillips and E. Davydov and D. Golovin and S. Chikkerur and D. Liu and M. Wattenberg and A. M. Hrafnkelsson and T. Boulos and J. Kubica},
+  title     = {Ad Click Prediction: A View from the Trenches},
+  booktitle = {Proceedings of the 19th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining},
+  year      = {2013},
+  series    = {KDD '13},
+  pages     = {1222--1230},
+  publisher = {ACM},
+  doi       = {10.1145/2487575.2488200},
+  file      = {:../../../papers/MHS+13.pdf:PDF},
+  owner     = {patrick},
+  timestamp = {2016-08-31},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
