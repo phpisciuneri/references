@@ -1,0 +1,323 @@
+% Encoding: UTF-8
+
+@Article{BBLG20,
+  author        = {Noam Brown and Anton Bakhtin and Adam Lerer and Qucheng Gong},
+  title         = {{C}ombining {D}eep {R}einforcement {L}earning and {S}earch for {I}mperfect-{I}nformation {G}ames},
+  year          = {2020},
+  month         = jul,
+  abstract      = {The combination of deep reinforcement learning and search at both training and test time is a powerful paradigm that has led to a number of successes in single-agent settings and perfect-information games, best exemplified by AlphaZero. However, prior algorithms of this form cannot cope with imperfect-information games. This paper presents ReBeL, a general framework for self-play reinforcement learning and search that provably converges to a Nash equilibrium in any two-player zero-sum game. In the simpler setting of perfect-information games, ReBeL reduces to an algorithm similar to AlphaZero. Results in two different imperfect-information games show ReBeL converges to an approximate Nash equilibrium. We also show ReBeL achieves superhuman performance in heads-up no-limit Texas hold'em poker, while using far less domain knowledge than any prior poker AI.},
+  archiveprefix = {arXiv},
+  eprint        = {2007.13544},
+  file          = {:http\://arxiv.org/pdf/2007.13544v2:PDF},
+  keywords      = {cs.GT, cs.AI, cs.LG},
+  owner         = {patrick},
+  primaryclass  = {cs.GT},
+}
+
+@Article{FKBS19,
+  author        = {Gabriele Farina and Christian Kroer and Noam Brown and Tuomas Sandholm},
+  title         = {{S}table-{P}redictive {O}ptimistic {C}ounterfactual {R}egret {M}inimization},
+  year          = {2019},
+  month         = feb,
+  abstract      = {The CFR framework has been a powerful tool for solving large-scale extensive-form games in practice. However, the theoretical rate at which past CFR-based algorithms converge to the Nash equilibrium is on the order of $O(T^{-1/2})$, where $T$ is the number of iterations. In contrast, first-order methods can be used to achieve a $O(T^{-1})$ dependence on iterations, yet these methods have been less successful in practice. In this work we present the first CFR variant that breaks the square-root dependence on iterations. By combining and extending recent advances on predictive and stable regret minimizers for the matrix-game setting we show that it is possible to leverage "optimistic" regret minimizers to achieve a $O(T^{-3/4})$ convergence rate within CFR. This is achieved by introducing a new notion of stable-predictivity, and by setting the stability of each counterfactual regret minimizer relative to its location in the decision tree. Experiments show that this method is faster than the original CFR algorithm, although not as fast as newer variants, in spite of their worst-case $O(T^{-1/2})$ dependence on iterations.},
+  archiveprefix = {arXiv},
+  eprint        = {1902.04982},
+  file          = {:http\://arxiv.org/pdf/1902.04982v1:PDF},
+  keywords      = {cs.GT, cs.AI, cs.LG, math.OC, stat.ML},
+  owner         = {patrick},
+  primaryclass  = {cs.GT},
+}
+
+@Article{BLGS18,
+  author        = {Noam Brown and Adam Lerer and Sam Gross and Tuomas Sandholm},
+  journal       = {International Conference on Machine Learning (ICML), 2019},
+  title         = {{D}eep {C}ounterfactual {R}egret {M}inimization},
+  year          = {2018},
+  month         = nov,
+  abstract      = {Counterfactual Regret Minimization (CFR) is the leading framework for solving large imperfect-information games. It converges to an equilibrium by iteratively traversing the game tree. In order to deal with extremely large games, abstraction is typically applied before running CFR. The abstracted game is solved with tabular CFR, and its solution is mapped back to the full game. This process can be problematic because aspects of abstraction are often manual and domain specific, abstraction algorithms may miss important strategic nuances of the game, and there is a chicken-and-egg problem because determining a good abstraction requires knowledge of the equilibrium of the game. This paper introduces Deep Counterfactual Regret Minimization, a form of CFR that obviates the need for abstraction by instead using deep neural networks to approximate the behavior of CFR in the full game. We show that Deep CFR is principled and achieves strong performance in large poker games. This is the first non-tabular variant of CFR to be successful in large games.},
+  archiveprefix = {arXiv},
+  eprint        = {1811.00164},
+  file          = {:http\://arxiv.org/pdf/1811.00164v3:PDF},
+  keywords      = {cs.AI, cs.GT, cs.LG},
+  owner         = {patrick},
+  primaryclass  = {cs.AI},
+}
+
+@Article{BS18,
+  author        = {Noam Brown and Tuomas Sandholm},
+  title         = {{S}olving {I}mperfect-{I}nformation {G}ames via {D}iscounted {R}egret {M}inimization},
+  year          = {2018},
+  month         = sep,
+  abstract      = {Counterfactual regret minimization (CFR) is a family of iterative algorithms that are the most popular and, in practice, fastest approach to approximately solving large imperfect-information games. In this paper we introduce novel CFR variants that 1) discount regrets from earlier iterations in various ways (in some cases differently for positive and negative regrets), 2) reweight iterations in various ways to obtain the output strategies, 3) use a non-standard regret minimizer and/or 4) leverage "optimistic regret matching". They lead to dramatically improved performance in many settings. For one, we introduce a variant that outperforms CFR+, the prior state-of-the-art algorithm, in every game tested, including large-scale realistic settings. CFR+ is a formidable benchmark: no other algorithm has been able to outperform it. Finally, we show that, unlike CFR+, many of the important new variants are compatible with modern imperfect-information-game pruning techniques and one is also compatible with sampling in the game tree.},
+  archiveprefix = {arXiv},
+  eprint        = {1809.04040},
+  file          = {:http\://arxiv.org/pdf/1809.04040v3:PDF},
+  keywords      = {cs.GT, cs.AI},
+  owner         = {patrick},
+  primaryclass  = {cs.GT},
+}
+
+@Article{SLZPTMB18,
+  author        = {Sriram Srinivasan and Marc Lanctot and Vinicius Zambaldi and Julien Perolat and Karl Tuyls and Remi Munos and Michael Bowling},
+  title         = {{A}ctor-{C}ritic {P}olicy {O}ptimization in {P}artially {O}bservable {M}ultiagent {E}nvironments},
+  year          = {2018},
+  month         = oct,
+  abstract      = {Optimization of parameterized policies for reinforcement learning (RL) is an important and challenging problem in artificial intelligence. Among the most common approaches are algorithms based on gradient ascent of a score function representing discounted return. In this paper, we examine the role of these policy gradient and actor-critic algorithms in partially-observable multiagent environments. We show several candidate policy update rules and relate them to a foundation of regret minimization and multiagent learning techniques for the one-shot and tabular cases, leading to previously unknown convergence guarantees. We apply our method to model-free multiagent reinforcement learning in adversarial sequential decision problems (zero-sum imperfect information games), using RL-style function approximation. We evaluate on commonly used benchmark Poker domains, showing performance against fixed policies and empirical convergence to approximate Nash equilibria in self-play with rates similar to or better than a baseline model-free algorithm for zero sum games, without any domain-specific state space reductions.},
+  archiveprefix = {arXiv},
+  eprint        = {1810.09026},
+  file          = {:http\://arxiv.org/pdf/1810.09026v5:PDF},
+  keywords      = {cs.LG, cs.AI, cs.GT, cs.MA, stat.ML},
+  owner         = {patrick},
+  primaryclass  = {cs.LG},
+}
+
+@Article{LLPLMTT19,
+  author        = {Edward Lockhart and Marc Lanctot and Julien Pérolat and Jean-Baptiste Lespiau and Dustin Morrill and Finbarr Timbers and Karl Tuyls},
+  title         = {{C}omputing {A}pproximate {E}quilibria in {S}equential {A}dversarial {G}ames by {E}xploitability {D}escent},
+  year          = {2019},
+  month         = mar,
+  abstract      = {In this paper, we present exploitability descent, a new algorithm to compute approximate equilibria in two-player zero-sum extensive-form games with imperfect information, by direct policy optimization against worst-case opponents. We prove that when following this optimization, the exploitability of a player's strategy converges asymptotically to zero, and hence when both players employ this optimization, the joint policies converge to a Nash equilibrium. Unlike fictitious play (XFP) and counterfactual regret minimization (CFR), our convergence result pertains to the policies being optimized rather than the average policies. Our experiments demonstrate convergence rates comparable to XFP and CFR in four benchmark games in the tabular case. Using function approximation, we find that our algorithm outperforms the tabular version in two of the games, which, to the best of our knowledge, is the first such result in imperfect information games among this class of algorithms.},
+  archiveprefix = {arXiv},
+  eprint        = {1903.05614},
+  file          = {:http\://arxiv.org/pdf/1903.05614v4:PDF},
+  keywords      = {cs.AI, cs.GT, cs.LG},
+  owner         = {patrick},
+  primaryclass  = {cs.AI},
+}
+
+@Article{TPLLG18,
+  author        = {Karl Tuyls and Julien Perolat and Marc Lanctot and Joel Z. Leibo and Thore Graepel},
+  title         = {{A} {G}eneralised {M}ethod for {E}mpirical {G}ame {T}heoretic {A}nalysis},
+  year          = {2018},
+  month         = mar,
+  abstract      = {This paper provides theoretical bounds for empirical game theoretical analysis of complex multi-agent interactions. We provide insights in the empirical meta game showing that a Nash equilibrium of the meta-game is an approximate Nash equilibrium of the true underlying game. We investigate and show how many data samples are required to obtain a close enough approximation of the underlying game. Additionally, we extend the meta-game analysis methodology to asymmetric games. The state-of-the-art has only considered empirical games in which agents have access to the same strategy sets and the payoff structure is symmetric, implying that agents are interchangeable. Finally, we carry out an empirical illustration of the generalised method in several domains, illustrating the theory and evolutionary dynamics of several versions of the AlphaGo algorithm (symmetric), the dynamics of the Colonel Blotto game played by human players on Facebook (symmetric), and an example of a meta-game in Leduc Poker (asymmetric), generated by the PSRO multi-agent learning algorithm.},
+  archiveprefix = {arXiv},
+  eprint        = {1803.06376},
+  file          = {:http\://arxiv.org/pdf/1803.06376v1:PDF},
+  keywords      = {cs.GT, cs.MA},
+  owner         = {patrick},
+  primaryclass  = {cs.GT},
+}
+
+@Conference{WWW19,
+  author    = {Mason Wright and Yongzhao Wang and Michael P. Wellman},
+  booktitle = {Proceedings of the 2019 ACM Conference on Economics and Computation},
+  title     = {{I}terated {D}eep {R}einforcement {L}earning in {G}ames: {H}istory-{A}ware {T}raining for {I}mproved {S}tability},
+  year      = {2019},
+  address   = {New York, NY, USA},
+  month     = {6},
+  pages     = {617–636},
+  publisher = {Association for Computing Machinery},
+  series    = {EC '19},
+  abstract  = {Deep reinforcement learning (RL) is a powerful method for generating policies in complex
+environments, and recent breakthroughs in game-playing have leveraged deep RL as part
+of an iterative multiagent search process. We build on such developments and present
+an approach that learns progressively better mixed strategies in complex dynamic games
+of imperfect information, through iterated use of empirical game-theoretic analysis
+(EGTA) with deep RL policies. We apply the approach to a challenging cybersecurity
+game defined over attack graphs. Iterating deep RL with EGTA to convergence over dozens
+of rounds, we generate mixed strategies far stronger than earlier published heuristic
+strategies for this game. We further refine the strategy-exploration process, by fine-tuning
+in a training environment that includes out-of-equilibrium but recently seen opponents.
+Experiments suggest this history-aware approach yields strategies with lower regret
+at each stage of training.},
+  day       = {17},
+  doi       = {10.1145/3328526.3329634},
+  isbn      = {9781450367929},
+  keywords  = {attack graphs, deep reinforcement learning, double oracle, multi-agent reinforcement learning, security games},
+  location  = {Phoenix, AZ, USA},
+  owner     = {patrick},
+  pagetotal = {20},
+  url       = {https://doi.org/10.1145/3328526.3329634},
+}
+
+@Article{SKL18,
+  author        = {Michal Sustr and Vojtech Kovarik and Viliam Lisy},
+  title         = {{M}onte {C}arlo {C}ontinual {R}esolving for {O}nline {S}trategy {C}omputation in {I}mperfect {I}nformation {G}ames},
+  year          = {2018},
+  month         = dec,
+  abstract      = {Online game playing algorithms produce high-quality strategies with a fraction of memory and computation required by their offline alternatives. Continual Resolving (CR) is a recent theoretically sound approach to online game playing that has been used to outperform human professionals in poker. However, parts of the algorithm were specific to poker, which enjoys many properties not shared by other imperfect information games. We present a domain-independent formulation of CR applicable to any two-player zero-sum extensive-form games that works with an abstract resolving algorithm. We further describe and implement its Monte Carlo variant (MCCR) which uses Monte Carlo Counterfactual Regret Minimization (MCCFR) as a resolver. We prove the correctness of CR and show an $O(T^{-1/2})$-dependence of MCCR's exploitability on the computation time. Furthermore, we present an empirical comparison of MCCR with incremental tree building to Online Outcome Sampling and Information-set MCTS on several domains.},
+  archiveprefix = {arXiv},
+  eprint        = {1812.07351},
+  file          = {:http\://arxiv.org/pdf/1812.07351v2:PDF},
+  keywords      = {cs.GT},
+  owner         = {patrick},
+  primaryclass  = {cs.GT},
+}
+
+@Article{FKS18,
+  author        = {Gabriele Farina and Christian Kroer and Tuomas Sandholm},
+  title         = {{R}egret {C}ircuits: {C}omposability of {R}egret {M}inimizers},
+  year          = {2018},
+  month         = nov,
+  abstract      = {Regret minimization is a powerful tool for solving large-scale problems; it was recently used in breakthrough results for large-scale extensive-form game solving. This was achieved by composing simplex regret minimizers into an overall regret-minimization framework for extensive-form game strategy spaces. In this paper we study the general composability of regret minimizers. We derive a calculus for constructing regret minimizers for composite convex sets that are obtained from convexity-preserving operations on simpler convex sets. We show that local regret minimizers for the simpler sets can be combined with additional regret minimizers into an aggregate regret minimizer for the composite set. As one application, we show that the CFR framework can be constructed easily from our framework. We also show ways to include curtailing (constraining) operations into our framework. For one, they enables the construction of CFR generalization for extensive-form games with general convex strategy constraints that can cut across decision points.},
+  archiveprefix = {arXiv},
+  eprint        = {1811.02540},
+  file          = {:http\://arxiv.org/pdf/1811.02540v2:PDF},
+  keywords      = {cs.LG, cs.AI, cs.GT, math.OC, stat.ML},
+  owner         = {patrick},
+  primaryclass  = {cs.LG},
+}
+
+@Article{LZGLTPSG17,
+  author        = {Marc Lanctot and Vinicius Zambaldi and Audrunas Gruslys and Angeliki Lazaridou and Karl Tuyls and Julien Perolat and David Silver and Thore Graepel},
+  title         = {{A} {U}nified {G}ame-{T}heoretic {A}pproach to {M}ultiagent {R}einforcement {L}earning},
+  year          = {2017},
+  month         = nov,
+  abstract      = {To achieve general intelligence, agents must learn how to interact with others in a shared environment: this is the challenge of multiagent reinforcement learning (MARL). The simplest form is independent reinforcement learning (InRL), where each agent treats its experience as part of its (non-stationary) environment. In this paper, we first observe that policies learned using InRL can overfit to the other agents' policies during training, failing to sufficiently generalize during execution. We introduce a new metric, joint-policy correlation, to quantify this effect. We describe an algorithm for general MARL, based on approximate best responses to mixtures of policies generated using deep reinforcement learning, and empirical game-theoretic analysis to compute meta-strategies for policy selection. The algorithm generalizes previous ones such as InRL, iterated best response, double oracle, and fictitious play. Then, we present a scalable implementation which reduces the memory requirement using decoupled meta-solvers. Finally, we demonstrate the generality of the resulting policies in two partially observable settings: gridworld coordination games and poker.},
+  archiveprefix = {arXiv},
+  eprint        = {1711.00832},
+  file          = {:http\://arxiv.org/pdf/1711.00832v2:PDF},
+  keywords      = {cs.AI, cs.GT, cs.LG, cs.MA},
+  owner         = {patrick},
+  primaryclass  = {cs.AI},
+}
+
+@Article{CNJ19,
+  author        = {Philippe Casgrain and Brian Ning and Sebastian Jaimungal},
+  title         = {{D}eep {Q}-{L}earning for {N}ash {E}quilibria: {N}ash-{DQN}},
+  year          = {2019},
+  month         = apr,
+  abstract      = {Model-free learning for multi-agent stochastic games is an active area of research. Existing reinforcement learning algorithms, however, are often restricted to zero-sum games, and are applicable only in small state-action spaces or other simplified settings. Here, we develop a new data efficient Deep-Q-learning methodology for model-free learning of Nash equilibria for general-sum stochastic games. The algorithm uses a local linear-quadratic expansion of the stochastic game, which leads to analytically solvable optimal actions. The expansion is parametrized by deep neural networks to give it sufficient flexibility to learn the environment without the need to experience all state-action pairs. We study symmetry properties of the algorithm stemming from label-invariant stochastic games and as a proof of concept, apply our algorithm to learning optimal trading strategies in competitive electronic markets.},
+  archiveprefix = {arXiv},
+  eprint        = {1904.10554},
+  file          = {:http\://arxiv.org/pdf/1904.10554v1:PDF},
+  keywords      = {cs.LG, cs.GT, q-fin.CP, stat.ML},
+  owner         = {patrick},
+  primaryclass  = {cs.LG},
+}
+
+@Article{HS16,
+  author        = {Johannes Heinrich and David Silver},
+  title         = {{D}eep {R}einforcement {L}earning from {S}elf-{P}lay in {I}mperfect-{I}nformation {G}ames},
+  year          = {2016},
+  month         = mar,
+  abstract      = {Many real-world applications can be described as large-scale games of imperfect information. To deal with these challenging domains, prior work has focused on computing Nash equilibria in a handcrafted abstraction of the domain. In this paper we introduce the first scalable end-to-end approach to learning approximate Nash equilibria without prior domain knowledge. Our method combines fictitious self-play with deep reinforcement learning. When applied to Leduc poker, Neural Fictitious Self-Play (NFSP) approached a Nash equilibrium, whereas common reinforcement learning methods diverged. In Limit Texas Holdem, a poker game of real-world scale, NFSP learnt a strategy that approached the performance of state-of-the-art, superhuman algorithms based on significant domain expertise.},
+  archiveprefix = {arXiv},
+  eprint        = {1603.01121},
+  file          = {:http\://arxiv.org/pdf/1603.01121v2:PDF},
+  keywords      = {cs.LG, cs.AI, cs.GT},
+  owner         = {patrick},
+  primaryclass  = {cs.LG},
+}
+
+@Article{LHGJQS18,
+  author        = {Hui Li and Kailiang Hu and Zhibang Ge and Tao Jiang and Yuan Qi and Le Song},
+  title         = {{D}ouble {N}eural {C}ounterfactual {R}egret {M}inimization},
+  year          = {2018},
+  month         = dec,
+  abstract      = {Counterfactual Regret Minimization (CRF) is a fundamental and effective technique for solving Imperfect Information Games (IIG). However, the original CRF algorithm only works for discrete state and action spaces, and the resulting strategy is maintained as a tabular representation. Such tabular representation limits the method from being directly applied to large games and continuing to improve from a poor strategy profile. In this paper, we propose a double neural representation for the imperfect information games, where one neural network represents the cumulative regret, and the other represents the average strategy. Furthermore, we adopt the counterfactual regret minimization algorithm to optimize this double neural representation. To make neural learning efficient, we also developed several novel techniques including a robust sampling method, mini-batch Monte Carlo Counterfactual Regret Minimization (MCCFR) and Monte Carlo Counterfactual Regret Minimization Plus (MCCFR+) which may be of independent interests. Experimentally, we demonstrate that the proposed double neural algorithm converges significantly better than the reinforcement learning counterpart.},
+  archiveprefix = {arXiv},
+  eprint        = {1812.10607},
+  file          = {:http\://arxiv.org/pdf/1812.10607v1:PDF},
+  keywords      = {cs.AI},
+  owner         = {patrick},
+  primaryclass  = {cs.AI},
+}
+
+@Article{SLB20,
+  author        = {Eric Steinberger and Adam Lerer and Noam Brown},
+  title         = {{DREAM}: {D}eep {R}egret {M}inimization with {A}dvantage {B}aselines and {M}odel-{F}ree {L}earning},
+  year          = {2020},
+  month         = jun,
+  abstract      = {We introduce DREAM, a deep reinforcement learning algorithm that finds optimal strategies in imperfect-information games with multiple agents. Formally, DREAM converges to a Nash Equilibrium in two-player zero-sum games and to an extensive-form coarse correlated equilibrium in all other games. Our primary innovation is an effective algorithm that, in contrast to other regret-based deep learning algorithms, does not require access to a perfect simulator of the game to achieve good performance. We show that DREAM empirically achieves state-of-the-art performance among model-free algorithms in popular benchmark games, and is even competitive with algorithms that do use a perfect simulator.},
+  archiveprefix = {arXiv},
+  eprint        = {2006.10410},
+  file          = {:http\://arxiv.org/pdf/2006.10410v2:PDF},
+  keywords      = {cs.LG, cs.GT, stat.ML},
+  owner         = {patrick},
+  primaryclass  = {cs.LG},
+}
+
+@Conference{HMOMPLGLPDT20,
+  author    = {Daniel Hennes and Dustin Morrill and Shayegan Omidshafiei and Rémi Munos and Julien Perolat and Marc Lanctot and Audrunas Gruslys and Jean-Baptiste Lespiau and Paavo Parmas and Edgar Duèñez-Guzmán and Karl Tuyls},
+  booktitle = {Proceedings of the 19th International Conference on Autonomous Agents and MultiAgent Systems},
+  title     = {{N}eural {R}eplicator {D}ynamics: {M}ultiagent {L}earning via {H}edging {P}olicy {G}radients},
+  year      = {2020},
+  address   = {Richland, SC},
+  month     = {5},
+  pages     = {492–501},
+  publisher = {International Foundation for Autonomous Agents and Multiagent Systems},
+  series    = {AAMAS '20},
+  abstract  = {Policy gradient and actor-critic algorithms form the basis of many commonly used training
+techniques in deep reinforcement learning. Using these algorithms in multiagent environments
+poses problems such as nonstationarity and instability. In this paper, we first demonstrate
+that standard softmax-based policy gradient can be prone to poor performance in the
+presence of even the most benign nonstationarity. By contrast, it is known that the
+replicator dynamics, a well-studied model from evolutionary game theory, eliminates
+dominated strategies and exhibits convergence of the time-averaged trajectories to
+interior Nash equilibria in zero-sum games. Thus, using the replicator dynamics as
+a foundation, we derive an elegant one-line change to policy gradient methods that
+simply bypasses the gradient step through the softmax, yielding a new algorithm titled
+Neural Replicator Dynamics (NeuRD). NeuRD reduces to the exponential weights/Hedge
+algorithm in the single-state all-actions case. Additionally, NeuRD has formal equivalence
+to softmax counterfactual regret minimization, which guarantees convergence in the
+sequential tabular case. Importantly, our algorithm provides a straightforward way
+of extending the replicator dynamics to the function approximation setting. Empirical
+results show that NeuRD quickly adapts to nonstationarities, outperforming policy
+gradient significantly in both tabular and function approximation settings, when evaluated
+on the standard imperfect information benchmarks of Kuhn Poker, Leduc Poker, and Goofspiel.},
+  day       = {5},
+  isbn      = {9781450375184},
+  keywords  = {games, multiagent, regret minimization, reinforcement learning},
+  location  = {Auckland, New Zealand},
+  owner     = {patrick},
+  pagetotal = {10},
+}
+
+@Article{Steinberger19,
+  author        = {Eric Steinberger},
+  title         = {{S}ingle {D}eep {C}ounterfactual {R}egret {M}inimization},
+  year          = {2019},
+  month         = jan,
+  abstract      = {Counterfactual Regret Minimization (CFR) is the most successful algorithm for finding approximate Nash equilibria in imperfect information games. However, CFR's reliance on full game-tree traversals limits its scalability. For this reason, the game's state- and action-space is often abstracted (i.e. simplified) for CFR, and the resulting strategy is then translated back to the full game, which requires extensive expert-knowledge and often converges to highly exploitable policies. A recently proposed method, Deep CFR, applies deep learning directly to CFR, allowing the agent to intrinsically abstract and generalize over the state-space from samples, without requiring expert knowledge. In this paper, we introduce Single Deep CFR (SD-CFR), a simplified variant of Deep CFR that has a lower overall approximation error by avoiding the training of an average strategy network. We show that SD-CFR is more attractive from a theoretical perspective and empirically outperforms Deep CFR with respect to exploitability and one-on-one play in poker.},
+  archiveprefix = {arXiv},
+  eprint        = {1901.07621},
+  file          = {:http\://arxiv.org/pdf/1901.07621v4:PDF},
+  keywords      = {cs.GT, cs.AI, cs.LG, cs.MA},
+  owner         = {patrick},
+  primaryclass  = {cs.GT},
+}
+
+@Article{SBLMKB18,
+  author        = {Martin Schmid and Neil Burch and Marc Lanctot and Matej Moravcik and Rudolf Kadlec and Michael Bowling},
+  title         = {{V}ariance {R}eduction in {M}onte {C}arlo {C}ounterfactual {R}egret {M}inimization ({VR}-{MCCFR}) for {E}xtensive {F}orm {G}ames using {B}aselines},
+  year          = {2018},
+  month         = sep,
+  abstract      = {Learning strategies for imperfect information games from samples of interaction is a challenging problem. A common method for this setting, Monte Carlo Counterfactual Regret Minimization (MCCFR), can have slow long-term convergence rates due to high variance. In this paper, we introduce a variance reduction technique (VR-MCCFR) that applies to any sampling variant of MCCFR. Using this technique, per-iteration estimated values and updates are reformulated as a function of sampled values and state-action baselines, similar to their use in policy gradient reinforcement learning. The new formulation allows estimates to be bootstrapped from other estimates within the same episode, propagating the benefits of baselines along the sampled trajectory; the estimates remain unbiased even when bootstrapping from other estimates. Finally, we show that given a perfect baseline, the variance of the value estimates can be reduced to zero. Experimental evaluation shows that VR-MCCFR brings an order of magnitude speedup, while the empirical variance decreases by three orders of magnitude. The decreased variance allows for the first time CFR+ to be used with sampling, increasing the speedup to two orders of magnitude.},
+  archiveprefix = {arXiv},
+  eprint        = {1809.03057},
+  file          = {:http\://arxiv.org/pdf/1809.03057v1:PDF},
+  keywords      = {cs.GT, cs.AI},
+  owner         = {patrick},
+  primaryclass  = {cs.GT},
+}
+
+@Article{BS19,
+  author    = {Noam Brown and Tuomas Sandholm},
+  journal   = {Science},
+  title     = {{S}uperhuman {AI} for {M}ultiplayer {P}oker},
+  year      = {2019},
+  issn      = {0036-8075},
+  number    = {6456},
+  pages     = {885--890},
+  volume    = {365},
+  abstract  = {Computer programs have shown superiority over humans in two-player games such as chess, Go, and heads-up, no-limit Texas hold{\textquoteright}em poker. However, poker games usually include six players{\textemdash}a much trickier challenge for artificial intelligence than the two-player variant. Brown and Sandholm developed a program, dubbed Pluribus, that learned how to play six-player no-limit Texas hold{\textquoteright}em by playing against five copies of itself (see the Perspective by Blair and Saffidine). When pitted against five elite professional poker players, or with five copies of Pluribus playing against one professional, the computer performed significantly better than humans over the course of 10,000 hands of poker.Science, this issue p. 885; see also p. 864In recent years there have been great strides in artificial intelligence (AI), with games often serving as challenge problems, benchmarks, and milestones for progress. Poker has served for decades as such a challenge problem. Past successes in such benchmarks, including poker, have been limited to two-player games. However, poker in particular is traditionally played with more than two players. Multiplayer games present fundamental additional issues beyond those in two-player games, and multiplayer poker is a recognized AI milestone. In this paper we present Pluribus, an AI that we show is stronger than top human professionals in six-player no-limit Texas hold{\textquoteright}em poker, the most popular form of poker played by humans.},
+  doi       = {10.1126/science.aay2400},
+  eprint    = {https://science.sciencemag.org/content/365/6456/885.full.pdf},
+  owner     = {patrick},
+  publisher = {American Association for the Advancement of Science},
+  url       = {https://science.sciencemag.org/content/365/6456/885},
+}
+
+@InProceedings{ZLZ20,
+  author    = {Yichi Zhou and Jialian Li and Jun Zhu},
+  booktitle = {International Conference on Learning Representations},
+  title     = {{P}osterior {S}ampling for {M}ulti-{A}gent {R}einforcement {L}earning: {S}olving {E}xtensive {G}ames with {I}mperfect {I}nformation},
+  year      = {2020},
+  abstract  = {Posterior sampling for reinforcement learning (PSRL) is a useful framework for making decisions in an unknown environment.  PSRL maintains a posterior distribution of the environment and then makes planning on the environment sampled from the posterior distribution. Though PSRL works well on single-agent reinforcement learning problems, how to apply PSRL to multi-agent reinforcement learning problems is relatively unexplored. In this work, we extend PSRL to two-player zero-sum extensive-games with imperfect information (TEGI), which is a class of multi-agent systems. More specifically, we combine PSRL with counterfactual regret minimization (CFR), which is the leading algorithm for TEGI with a known environment. Our main contribution is a novel design of interaction strategies. With our interaction strategies, our algorithm provably converges to the Nash Equilibrium at a rate of $O(\sqrt \log T / T)$. Empirical results show that our algorithm works well.},
+  owner     = {patrick},
+  url       = {https://openreview.net/forum?id=Syg-ET4FPS},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
